@@ -1,11 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
 using Patient.Application.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Patient.Application.Features.Patient.Queries.GetPatientsList
 {

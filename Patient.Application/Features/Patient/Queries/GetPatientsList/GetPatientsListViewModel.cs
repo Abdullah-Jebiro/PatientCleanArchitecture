@@ -1,4 +1,6 @@
-﻿namespace Patient.Application.Features.Patient.Queries.GetPatientsList
+﻿using Patient.Application.Features.Patient.Queries.GetPatientDetail;
+
+namespace Patient.Application.Features.Patient.Queries.GetPatientsList
 {
     public class GetPatientsListViewModel
     {
