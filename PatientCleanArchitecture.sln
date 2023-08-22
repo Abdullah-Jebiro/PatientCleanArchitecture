@@ -17,7 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{96773244-336
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patient.Application", "Patient.Application\Patient.Application.csproj", "{7F557BE8-7651-478C-9CCC-B53781148E78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patient.Persistence", "Patient.Persistence\Patient.Persistence.csproj", "{43CEFCA6-A258-4725-83B1-5D51F85C46FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patient.Persistence", "Patient.Persistence\Patient.Persistence.csproj", "{43CEFCA6-A258-4725-83B1-5D51F85C46FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patient.Api", "Patient.Api\Patient.Api.csproj", "{22DF4D8D-BD4B-4F12-9C14-0052CA6EDA20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{43CEFCA6-A258-4725-83B1-5D51F85C46FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43CEFCA6-A258-4725-83B1-5D51F85C46FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43CEFCA6-A258-4725-83B1-5D51F85C46FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22DF4D8D-BD4B-4F12-9C14-0052CA6EDA20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22DF4D8D-BD4B-4F12-9C14-0052CA6EDA20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22DF4D8D-BD4B-4F12-9C14-0052CA6EDA20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22DF4D8D-BD4B-4F12-9C14-0052CA6EDA20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 		{96773244-3360-4B5E-94D1-58C23CD1D6EF} = {1E431A67-8B51-449F-9BF1-F07D0AC5F614}
 		{7F557BE8-7651-478C-9CCC-B53781148E78} = {D59A57E8-9F4E-4AEB-B6FB-3BA3FFAE4811}
 		{43CEFCA6-A258-4725-83B1-5D51F85C46FC} = {3B11A24C-B758-4ECA-8C63-4B0E7D417A90}
+		{22DF4D8D-BD4B-4F12-9C14-0052CA6EDA20} = {96773244-3360-4B5E-94D1-58C23CD1D6EF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9BAB5042-A309-4EEF-A1ED-8480C0F6E7B5}

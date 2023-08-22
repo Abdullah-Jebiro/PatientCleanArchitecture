@@ -9,6 +9,6 @@ namespace Patient.Application.Features.Patient.Commands.DeletePatient
 {
     public class DeletePatientCommand : IRequest
     {
-        public Guid PatientId { get; set; }
+        public Guid Id { get; set; }
     }
 }

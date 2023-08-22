@@ -1,4 +1,4 @@
-﻿namespace Patient.Application.Features.Patient.Queries.GetPatientsList
+﻿namespace Patient.Application.Features.Patient.Queries.GetPatientDetail
 {
     public class AddressDto
     {

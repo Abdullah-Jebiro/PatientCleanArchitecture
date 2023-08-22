@@ -28,7 +28,7 @@ namespace Patient.Application.Features.Patient.Commands.CreatePatient
 
             patient = await _patientRepository.AddAsync(patient);
 
-            return patient.Id;
+            return patient.PatientId;
 
 
         }

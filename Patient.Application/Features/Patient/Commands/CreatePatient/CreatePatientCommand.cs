@@ -1,4 +1,5 @@
-﻿using Patient.Domain;
+﻿using MediatR;
+using Patient.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Patient.Application.Features.Patient.Commands.CreatePatient
 {
-    internal class CreatePatientCommandHandler
+    public class CreatePatientCommand:IRequest<Guid>
     {
         public string Name { get; set; } = null!;
         public int FileNo { get; set; }

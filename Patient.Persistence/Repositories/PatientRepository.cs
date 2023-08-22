@@ -30,7 +30,7 @@ namespace Patient.Persistence
         {
             Domain.Patient? Patient = new Domain.Patient();
             Patient = includeCategory ?
-                await _dbContext.Patients.Include(x => x.Address).FirstOrDefaultAsync(x => x.Id == id) : 
+                await _dbContext.Patients.Include(x => x.Address).FirstOrDefaultAsync(x => x.PatientId == id) : 
                 await GetByIdAsync(id);
 
             if (Patient == null)
