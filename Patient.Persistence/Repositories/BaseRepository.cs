@@ -9,9 +9,9 @@ namespace Patient.Persistence
 {
     public partial class BaseRepository<T> : IAsyncRepository<T> where T : class
     {
-        protected readonly PatientDbContext _dbContext;
+        protected readonly ApplicationDbContext _dbContext;
 
-        public BaseRepository(PatientDbContext dbContext)
+        public BaseRepository(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
         }

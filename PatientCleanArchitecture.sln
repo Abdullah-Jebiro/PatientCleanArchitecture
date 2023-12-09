@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patient.Application", "Pati
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patient.Persistence", "Patient.Persistence\Patient.Persistence.csproj", "{43CEFCA6-A258-4725-83B1-5D51F85C46FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patient.Api", "Patient.Api\Patient.Api.csproj", "{22DF4D8D-BD4B-4F12-9C14-0052CA6EDA20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patient.Api", "Patient.Api\Patient.Api.csproj", "{22DF4D8D-BD4B-4F12-9C14-0052CA6EDA20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -14,4 +14,5 @@ namespace Patient.Application.Interfaces
         Task UpdateAsync(T entity);
         Task DeleteAsync(T entity);
     }
+
 }

@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Patient.Application.Interfaces;
+using Patient.Application.Mappings;
+using Patient.Application.Models;
+using Patient.Domain;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -8,22 +11,27 @@ namespace Patient.Persistence
 {
     public class PatientRepository : BaseRepository<Domain.Patient>, IPatientRepository
     {
-        public PatientRepository(PatientDbContext patientDbContext): base(patientDbContext)
+
+
+        public PatientRepository(ApplicationDbContext patientDbContext): base(patientDbContext)
         {
 
         }
-        public async Task<IReadOnlyList<Domain.Patient>> GetAllPatientsAsync(bool includeCategory)
+        public async Task<PaginatedList<Domain.Patient>> GetAllPatientsAsync(bool includeCategory ,int pageNumber , int pageSize)
         {
-            List<Domain.Patient> allPatients = new List<Domain.Patient>();
+            IQueryable<Domain.Patient> allPatients;
             allPatients = includeCategory ?
-                  await _dbContext.Patients.Include(x => x.Address).ToListAsync() :
-                  await _dbContext.Patients.ToListAsync();
+                   _dbContext.Patients.Include(x => x.Address) :
+                   _dbContext.Patients;
+
+          
 
             if (!allPatients.Any())
             {
                 throw new Exception();
             }
-            return allPatients;
+
+            return await PaginatedList<Domain.Patient>.CreateAsync(allPatients, pageNumber, pageSize);
         }
 
         public async Task<Domain.Patient> GetPatientByIdAsync(Guid id, bool includeCategory)

@@ -1,4 +1,5 @@
-﻿using Patient.Application.Features.Patient.Queries.GetPatientDetail;
+﻿using AutoMapper;
+using Patient.Application.Features.Patient.Queries.GetPatientDetail;
 
 namespace Patient.Application.Features.Patient.Queries.GetPatientsList
 {
@@ -10,5 +11,15 @@ namespace Patient.Application.Features.Patient.Queries.GetPatientsList
         public string ContactPhone { get; set; } = null!;
         public DateTime FirstVisitDate { get; set; }
         public AddressDto? Address { get; set; }
+
+        private class Mapping : Profile
+        {
+            public Mapping()
+            {
+                CreateMap<Domain.Address, AddressDto>();
+                CreateMap<Domain.Patient, GetPatientsListViewModel>()
+                    .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Address));
+            }
+        }
     }
 }
