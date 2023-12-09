@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Patient.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class Init : Migration
+    public partial class Add : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -66,7 +66,7 @@ namespace Patient.Persistence.Migrations
             migrationBuilder.InsertData(
                 table: "Patients",
                 columns: new[] { "PatientId", "AddressId", "BirthDate", "CitizenId", "ContactPerson", "ContactPhone", "ContactRelation", "Email", "FileNo", "FirstVisitDate", "Gender", "Name", "Nationality", "PhoneNumber", "RecordCreationDate" },
-                values: new object[] { new Guid("d73ee5d4-be83-4bce-b6e6-2b3b309e478c"), new Guid("dfe2516e-37a7-4b5c-ac37-ebc58f5e0a42"), new DateTime(1985, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "123456789", "Jane Smith", "987-654-3210", "Spouse", "john.doe@example.com", 1001, new DateTime(2022, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), 0, "John Doe", "USA", "123-456-7890", new DateTime(2023, 8, 23, 2, 11, 11, 521, DateTimeKind.Local).AddTicks(89) });
+                values: new object[] { new Guid("3cfc367c-f198-4b6f-9cc9-1ad792cab345"), new Guid("dfe2516e-37a7-4b5c-ac37-ebc58f5e0a42"), new DateTime(1985, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "123456789", "Jane Smith", "987-654-3210", "Spouse", "john.doe@example.com", 1001, new DateTime(2022, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), 0, "John Doe", "USA", "123-456-7890", new DateTime(2023, 12, 7, 2, 51, 4, 277, DateTimeKind.Local).AddTicks(9983) });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Patients_AddressId",

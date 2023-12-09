@@ -10,6 +10,5 @@
         public string Street { get; set; } = null!;
         public string Address1 { get; set; } = null!;
         public string? Address2 { get; set; }
-        public Patient Patient { get; set; } = null!;
     }
 }

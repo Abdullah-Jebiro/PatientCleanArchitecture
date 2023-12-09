@@ -23,7 +23,7 @@ namespace Patient.Application.Features.Patient.Commands.CreatePatient
 
             if (result.Errors.Any())
             {
-                throw new Exception("patient is not valid");
+                throw new Exception(result.Errors.FirstOrDefault().ToString() );
             }
 
             patient = await _patientRepository.AddAsync(patient);

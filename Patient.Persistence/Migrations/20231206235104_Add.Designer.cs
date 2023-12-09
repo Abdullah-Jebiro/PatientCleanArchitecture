@@ -11,9 +11,9 @@ using Patient.Persistence;
 
 namespace Patient.Persistence.Migrations
 {
-    [DbContext(typeof(PatientDbContext))]
-    [Migration("20230822231111_Init")]
-    partial class Init
+    [DbContext(typeof(ApplicationDbContext))]
+    [Migration("20231206235104_Add")]
+    partial class Add
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -133,7 +133,7 @@ namespace Patient.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            PatientId = new Guid("d73ee5d4-be83-4bce-b6e6-2b3b309e478c"),
+                            PatientId = new Guid("3cfc367c-f198-4b6f-9cc9-1ad792cab345"),
                             AddressId = new Guid("dfe2516e-37a7-4b5c-ac37-ebc58f5e0a42"),
                             BirthDate = new DateTime(1985, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CitizenId = "123456789",
@@ -147,7 +147,7 @@ namespace Patient.Persistence.Migrations
                             Name = "John Doe",
                             Nationality = "USA",
                             PhoneNumber = "123-456-7890",
-                            RecordCreationDate = new DateTime(2023, 8, 23, 2, 11, 11, 521, DateTimeKind.Local).AddTicks(89)
+                            RecordCreationDate = new DateTime(2023, 12, 7, 2, 51, 4, 277, DateTimeKind.Local).AddTicks(9983)
                         });
                 });
 

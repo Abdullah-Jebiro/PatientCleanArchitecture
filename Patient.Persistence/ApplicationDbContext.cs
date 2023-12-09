@@ -1,12 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Patient.Application.Interfaces;
 using Patient.Domain;
 using System;
 
 namespace Patient.Persistence
 {
-    public class PatientDbContext : DbContext
+    public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
-        public PatientDbContext(DbContextOptions<PatientDbContext> options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) { }
 
         public DbSet<Domain.Patient> Patients { get; set; }
@@ -16,10 +17,7 @@ namespace Patient.Persistence
         {
             base.OnModelCreating(builder);
             builder.Entity<Domain.Patient>().Property(p => p.PatientId).HasDefaultValueSql("NEWID()");
-            builder.Entity<Address>()
-                .HasOne(p => p.Patient)
-                .WithOne(a => a.Address)
-                .HasForeignKey<Domain.Patient>();
+       
 
             builder.Entity<Address>().HasData(AddAddress());
             builder.Entity<Domain.Patient>().HasData(AddPatients());
